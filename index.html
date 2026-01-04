@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PEPIQ X ElizaOS - AI-Powered Meme Coin on Solana</title>
+    <title>PEPIQ X ElizaOS - AI-Powered Meme on Solana</title>
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        INTRODUCING PEPIQ: AI CHAT AGENT × 402X INTEGRATION - MEME WITH REAL UTILITY
+        <button class="close-banner">×</button>
+    </div>
+
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
@@ -17,279 +22,241 @@
                 <img src="assets/logo.png" alt="PEPIQ">
                 <span>PEPIQ</span>
             </div>
-            <div class="nav-menu">
+            <div class="nav-links">
                 <a href="#about">ABOUT</a>
                 <a href="#features">FEATURES</a>
                 <a href="#tokenomics">TOKENOMICS</a>
-                <a href="#roadmap">ROADMAP</a>
-                <a href="https://t.me/PEPIQ_SOL" target="_blank"><i class="fab fa-telegram"></i></a>
-                <a href="https://x.com/PEPIQ_SOL" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://t.me/PEPIQ_SOL" target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+                    </svg>
+                </a>
+                <a href="https://x.com/PEPIQ_SOL" target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
             </div>
-            <a href="#" class="nav-cta" data-tooltip="Coming Soon">Launch App</a>
+            <a href="#" class="nav-cta" data-tooltip="Coming Soon">LAUNCH APP</a>
         </div>
     </nav>
 
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div class="badge">Meme + Project</div>
-            <h1>$PEPIQ</h1>
-            <h2 class="hero-subtitle">X ElizaOS</h2>
-            <p class="hero-desc">Meet PEPIQ AI—your intelligent chat companion built with ElizaOS. Featuring 402X integration on Solana for seamless connectivity.</p>
-            
-            <div class="hero-actions">
-                <a href="#buy" class="btn btn-primary">BUY $PEPIQ</a>
-                <a href="#about" class="btn btn-secondary">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Intro -->
-    <section class="intro">
-        <div class="container">
-            <h2>The Meme with a Brain</h2>
-            <p class="intro-text">PEPIQ has its own AI agent built on ElizaOS Cloud—a chat-based companion that interacts with the community, answers questions, and brings personality to the project.</p>
-            <p class="intro-subtext">Not just a token. PEPIQ AI is your friendly chat buddy powered by cutting-edge AI technology.</p>
-        </div>
-    </section>
-
-    <!-- Features Grid -->
-    <section id="features" class="features-section">
-        <div class="container-wide">
-            <div class="feature-card">
-                <div class="feature-label">AI Chat</div>
-                <h3>PEPIQ AI Agent</h3>
-                <p>Chat with PEPIQ AI—our custom agent built on ElizaOS Cloud. Ask questions, get info, and have fun conversations.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-label">Integration</div>
-                <h3>402X Protocol</h3>
-                <p>Built with 402X integration technology for enhanced cross-protocol connectivity across the Solana ecosystem.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-label">Community First</div>
-                <h3>Fair Launch</h3>
-                <p>100% community-owned. Zero taxes, LP burned, contract renounced. Built by the people, for the people.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-label">Security</div>
-                <h3>Safe & Secure</h3>
-                <p>Liquidity permanently locked, ownership renounced. Your investment is protected on Solana.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="architecture">
-        <div class="container">
-            <h2>Why PEPIQ?</h2>
-            
-            <div class="arch-grid">
-                <div class="arch-item">
-                    <img src="assets/banner1.jpg" alt="PEPIQ AI" class="arch-img">
-                    <div class="arch-content">
-                        <span class="arch-tag">AI Technology</span>
-                        <h3>Chat with PEPIQ AI</h3>
-                        <p>We built our own AI agent using ElizaOS Cloud. Chat, ask questions, and interact with PEPIQ AI anytime. Enhanced with 402X integration.</p>
-                    </div>
+            <div class="hero-content">
+                <h1>$PEPIQ<br>X ElizaOS</h1>
+                <p class="hero-desc">AI chat agent meets meme culture—featuring 402X integration on Solana</p>
+                <div class="hero-subtitle">
+                    Chat with PEPIQ AI, your intelligent companion built on ElizaOS Cloud. Ask questions, get instant responses, and experience the future of AI-powered memes.
                 </div>
-
-                <div class="arch-item">
-                    <img src="assets/banner2.jpg" alt="Community" class="arch-img">
-                    <div class="arch-content">
-                        <span class="arch-tag">Community Driven</span>
-                        <h3>For the Community</h3>
-                        <p>Fair launch with no team tokens. LP burned forever, contract renounced. This token belongs to you.</p>
-                    </div>
+                <div class="hero-actions">
+                    <a href="#buy" class="btn btn-primary">BUY $PEPIQ</a>
+                    <a href="#about" class="btn btn-secondary">LEARN MORE</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Comparison -->
-    <section class="comparison">
-        <div class="container">
-            <div class="comp-header">
-                <span class="section-tag">The Difference</span>
-                <h2>Regular Memes vs PEPIQ AI</h2>
-            </div>
-
-            <p class="comp-intro">Most meme coins are just tokens. PEPIQ has a real AI chat agent you can talk to.</p>
-
-            <div class="comp-grid">
-                <div class="comp-item">
-                    <h4>Interaction</h4>
-                    <div class="comp-old">Traditional: Just buy and hold, no engagement</div>
-                    <div class="comp-new">PEPIQ: Chat with our AI agent built on ElizaOS</div>
-                </div>
-
-                <div class="comp-item">
-                    <h4>Community Support</h4>
-                    <div class="comp-old">Traditional: Wait for team to respond</div>
-                    <div class="comp-new">PEPIQ: AI answers your questions 24/7</div>
-                </div>
-
-                <div class="comp-item">
-                    <h4>Value Proposition</h4>
-                    <div class="comp-old">Traditional: Just another speculative meme</div>
-                    <div class="comp-new">PEPIQ: Real AI utility you can use right now</div>
-                </div>
-
-                <div class="comp-item">
-                    <h4>Ownership</h4>
-                    <div class="comp-old">Traditional: Team-controlled with hidden wallets</div>
-                    <div class="comp-new">PEPIQ: 100% community-owned, LP burned, renounced</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Difference -->
-    <section class="core">
+    <!-- Intro Statement -->
+    <section class="intro-statement">
         <div class="container-narrow">
-            <span class="section-tag">What Makes Us Different</span>
-            <h2>Talk to PEPIQ AI</h2>
-            <p class="core-text">PEPIQ isn't just a meme coin—we actually built an AI chat agent using ElizaOS Cloud. You can chat with PEPIQ AI, ask questions, and get instant responses.</p>
-            <p class="core-text">This is <strong>real AI utility</strong> you can use today. Not promises, not roadmaps—just chat and see for yourself.</p>
+            <h2>A new primitive for AI memes</h2>
+            <p>PEPIQ introduces chat-based AI utility where you can actually talk to an intelligent agent. Not just hype—real AI you can use today.</p>
+            <p class="subtext">Intelligence meets community—a categorical shift from empty memes to interactive experiences.</p>
+        </div>
+    </section>
+
+    <!-- Feature Cards -->
+    <section id="features" class="feature-cards">
+        <div class="container-wide">
+            <div class="fcard">
+                <div class="fcard-label">AI Chat</div>
+                <h3>PEPIQ AI Agent</h3>
+                <div class="fcard-tags">
+                    <span>ElizaOS</span>
+                    <span>24/7 Available</span>
+                </div>
+                <p>Chat with our AI agent built on ElizaOS Cloud. Ask questions, get information, have conversations—intelligent interaction you can use right now.</p>
+            </div>
+
+            <div class="fcard">
+                <div class="fcard-label">Integration</div>
+                <h3>402X Protocol</h3>
+                <div class="fcard-tags">
+                    <span>Cross-Protocol</span>
+                    <span>Seamless</span>
+                </div>
+                <p>Built with 402X integration technology for enhanced connectivity across Solana's ecosystem. Designed for the future.</p>
+            </div>
+
+            <div class="fcard">
+                <div class="fcard-label">Community</div>
+                <h3>Fair Launch</h3>
+                <div class="fcard-tags">
+                    <span>0% Tax</span>
+                    <span>LP Burned</span>
+                </div>
+                <p>100% community-owned with LP burned and contract renounced. No team allocation. True decentralization from day one.</p>
+            </div>
+
+            <div class="fcard">
+                <div class="fcard-label">Security</div>
+                <h3>Protected</h3>
+                <div class="fcard-tags">
+                    <span>Renounced</span>
+                    <span>Locked</span>
+                </div>
+                <p>Liquidity permanently locked, ownership renounced. Your investment is secured on Solana's battle-tested infrastructure.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image + Text Sections -->
+    <section id="about" class="image-text-section">
+        <div class="container">
+            <img src="assets/banner1.jpg" alt="PEPIQ AI" class="section-img">
+            <div class="section-text">
+                <span class="text-label">AI Technology</span>
+                <h2>Chat with PEPIQ AI</h2>
+                <p>We built our own AI agent using ElizaOS Cloud. Not automation scripts—a real conversational AI that understands context, answers questions, and engages naturally.</p>
+                <p>Available 24/7 for the community. Enhanced with 402X integration for seamless connectivity.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="image-text-section reverse">
+        <div class="container">
+            <img src="assets/banner2.jpg" alt="Community" class="section-img">
+            <div class="section-text">
+                <span class="text-label">Community Driven</span>
+                <h2>Built for the People</h2>
+                <p>Fair launch with zero team tokens. Liquidity burned forever, contract renounced on day one. This isn't our token—it's yours.</p>
+                <p>Every decision is community-driven. PEPIQ belongs to the holders, not a centralized team.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container-narrow">
+            <div class="section-header-center">
+                <span class="section-tag">Paradigm Shift</span>
+                <h2>Traditional Memes vs AI-Powered Memes</h2>
+            </div>
+
+            <p class="comparison-intro">Most meme coins are just tokens with no purpose. PEPIQ combines viral culture with real AI technology you can interact with today.</p>
+
+            <div class="comparison-table">
+                <div class="comparison-row">
+                    <div class="comp-label">Interaction</div>
+                    <div class="comp-old">Traditional: Buy and hold, nothing to do</div>
+                    <div class="comp-new">PEPIQ: Chat with AI agent anytime</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comp-label">Support</div>
+                    <div class="comp-old">Traditional: Wait for team response</div>
+                    <div class="comp-new">PEPIQ: AI answers 24/7 instantly</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comp-label">Utility</div>
+                    <div class="comp-old">Traditional: Zero utility, pure speculation</div>
+                    <div class="comp-new">PEPIQ: Real AI you can use right now</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comp-label">Ownership</div>
+                    <div class="comp-old">Traditional: Team-controlled</div>
+                    <div class="comp-new">PEPIQ: 100% community, LP burned</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Message -->
+    <section class="core-message">
+        <div class="container-narrow">
+            <span class="section-tag">The Core Difference</span>
+            <h2>Real AI, Real Conversations</h2>
+            <p>PEPIQ isn't just claiming AI integration—we actually built it. ElizaOS powers our chat agent that responds to you intelligently, contextually, naturally.</p>
+            <p>This isn't vaporware. <strong>Chat with PEPIQ AI and see for yourself.</strong> The technology exists today, not in some distant roadmap.</p>
         </div>
     </section>
 
     <!-- Tokenomics -->
-    <section id="tokenomics" class="tokenomics">
-        <div class="container">
-            <span class="section-tag">Tokenomics</span>
-            <h2>Simple & Fair Distribution</h2>
-            
-            <div class="token-stats">
-                <div class="token-stat-main">
-                    <h3>Total Supply</h3>
-                    <div class="supply-num">1B</div>
-                    <p>PEPIQ Tokens</p>
-                </div>
+    <section id="tokenomics" class="tokenomics-section">
+        <div class="container-narrow">
+            <div class="section-header-center">
+                <span class="section-tag">Tokenomics</span>
+                <h2>Simple & Fair Distribution</h2>
+            </div>
 
-                <div class="token-features">
-                    <div class="token-feature">
-                        <i class="fas fa-check"></i>
-                        <div>
-                            <strong>0% Tax</strong>
-                            <span>No buy or sell fees</span>
-                        </div>
-                    </div>
-                    <div class="token-feature">
-                        <i class="fas fa-check"></i>
-                        <div>
-                            <strong>LP Burned</strong>
-                            <span>Liquidity locked forever</span>
-                        </div>
-                    </div>
-                    <div class="token-feature">
-                        <i class="fas fa-check"></i>
-                        <div>
-                            <strong>Contract Renounced</strong>
-                            <span>True decentralization</span>
-                        </div>
-                    </div>
-                    <div class="token-feature">
-                        <i class="fas fa-check"></i>
-                        <div>
-                            <strong>100% Community</strong>
-                            <span>No team allocation</span>
-                        </div>
-                    </div>
+            <div class="token-supply-box">
+                <div class="supply-label">Total Supply</div>
+                <div class="supply-number">1B</div>
+                <div class="supply-desc">PEPIQ Tokens</div>
+            </div>
+
+            <div class="token-features-list">
+                <div class="token-feat">
+                    <div class="feat-title">0% Tax</div>
+                    <div class="feat-desc">No buy or sell fees</div>
+                </div>
+                <div class="token-feat">
+                    <div class="feat-title">LP Burned</div>
+                    <div class="feat-desc">Liquidity locked forever</div>
+                </div>
+                <div class="token-feat">
+                    <div class="feat-title">Contract Renounced</div>
+                    <div class="feat-desc">True decentralization</div>
+                </div>
+                <div class="token-feat">
+                    <div class="feat-title">100% Community</div>
+                    <div class="feat-desc">No team allocation</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Roadmap -->
-    <section id="roadmap" class="roadmap">
-        <div class="container">
-            <span class="section-tag">Roadmap</span>
-            <h2>Our Journey</h2>
-            
-            <div class="roadmap-list">
-                <div class="roadmap-item completed">
-                    <div class="roadmap-phase">PHASE 1</div>
-                    <h3>Launch</h3>
-                    <ul>
-                        <li>Fair launch on Solana</li>
-                        <li>Community formation</li>
-                        <li>LP burn & contract renounce</li>
-                        <li>Social media setup</li>
-                    </ul>
-                </div>
-
-                <div class="roadmap-item active">
-                    <div class="roadmap-phase">PHASE 2</div>
-                    <h3>AI Agent Launch</h3>
-                    <ul>
-                        <li>Deploy PEPIQ AI chat agent (ElizaOS)</li>
-                        <li>Community can chat with AI</li>
-                        <li>DEX listings (Raydium, Jupiter)</li>
-                        <li>Marketing campaign</li>
-                    </ul>
-                </div>
-
-                <div class="roadmap-item">
-                    <div class="roadmap-phase">PHASE 3</div>
-                    <h3>Growth</h3>
-                    <ul>
-                        <li>AI agent improvements & updates</li>
-                        <li>CEX listings</li>
-                        <li>Partnership announcements</li>
-                        <li>Community events</li>
-                    </ul>
-                </div>
-
-                <div class="roadmap-item">
-                    <div class="roadmap-phase">PHASE 4</div>
-                    <h3>Expansion</h3>
-                    <ul>
-                        <li>Advanced AI features</li>
-                        <li>Holder rewards program</li>
-                        <li>Global community growth</li>
-                        <li>Continuous development</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
+    <!-- CTA Section -->
     <section id="buy" class="cta-section">
         <div class="container-narrow">
-            <h2>Get PEPIQ & Chat with Our AI</h2>
-            <p>Join the community and try our AI chat agent built on ElizaOS.</p>
-            
-            <div class="cta-steps">
-                <div class="cta-step">
+            <h2>Experience AI-Powered Memes Today</h2>
+            <p>Join the community and chat with PEPIQ AI built on ElizaOS.</p>
+
+            <div class="steps-grid">
+                <div class="step-item">
                     <div class="step-num">1</div>
-                    <p>Get a Solana Wallet</p>
+                    <div class="step-text">Get Solana wallet</div>
                 </div>
-                <div class="cta-step">
+                <div class="step-item">
                     <div class="step-num">2</div>
-                    <p>Buy SOL on Exchange</p>
+                    <div class="step-text">Buy SOL</div>
                 </div>
-                <div class="cta-step">
+                <div class="step-item">
                     <div class="step-num">3</div>
-                    <p>Swap for $PEPIQ</p>
+                    <div class="step-text">Swap for $PEPIQ</div>
                 </div>
             </div>
 
             <div class="ca-box">
                 <label>Contract Address</label>
-                <div class="ca-input">
+                <div class="ca-input-wrapper">
                     <input type="text" id="ca" value="SOON" readonly>
-                    <button onclick="copyCA()"><i class="fas fa-copy"></i></button>
+                    <button onclick="copyCA()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
 
-            <div class="cta-buttons">
-                <a href="#" class="btn btn-primary-large btn-disabled" data-tooltip="Coming Soon">Launch App</a>
-                <a href="https://t.me/PEPIQ_SOL" target="_blank" class="btn btn-secondary-large">Join Telegram</a>
+            <div class="cta-actions">
+                <a href="#" class="btn btn-large btn-disabled" data-tooltip="Coming Soon">LAUNCH APP</a>
+                <a href="https://t.me/PEPIQ_SOL" target="_blank" class="btn btn-large btn-outline">JOIN TELEGRAM</a>
             </div>
         </div>
     </section>
@@ -304,22 +271,19 @@
                     <a href="#features">Features</a>
                     <a href="#tokenomics">Tokenomics</a>
                 </div>
-
                 <div class="footer-col">
                     <h4>Community</h4>
                     <a href="https://t.me/PEPIQ_SOL" target="_blank">Telegram</a>
                     <a href="https://x.com/PEPIQ_SOL" target="_blank">Twitter/X</a>
                 </div>
-
                 <div class="footer-col">
                     <h4>Contract</h4>
                     <a href="#buy">CA: SOON</a>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>© 2025 PEPIQ</p>
-                <p class="disclaimer">Not financial advice. DYOR.</p>
+                <div>© 2025 PEPIQ</div>
+                <div class="footer-disclaimer">Not financial advice. DYOR.</div>
             </div>
         </div>
     </footer>
