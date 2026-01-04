@@ -13,6 +13,17 @@ function copyCA() {
     });
 }
 
+// Prevent disabled buttons from being clicked
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.btn-disabled, [data-tooltip]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            if (btn.classList.contains('btn-disabled') || btn.hasAttribute('data-tooltip')) {
+                e.preventDefault();
+            }
+        });
+    });
+});
+
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
