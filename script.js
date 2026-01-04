@@ -32,19 +32,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Nav shadow on scroll
+let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('.nav');
-    if (window.scrollY > 50) {
-        nav.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+    const currentScroll = window.scrollY;
+    
+    if (currentScroll > 50) {
+        nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
     } else {
         nav.style.boxShadow = 'none';
     }
+    
+    lastScroll = currentScroll;
 });
 
 // Intersection Observer for fade-in animations
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -59,7 +64,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll(
-        '.feature-card, .product-item, .arch-item, .comp-item, .roadmap-item'
+        '.feature-card, .arch-item, .comp-item, .roadmap-item'
     );
     
     animatedElements.forEach(el => {
@@ -70,5 +75,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-console.log('%cPEPIQ - 402X Integration Protocol', 'font-size: 16px; font-weight: bold; color: #0A4D0A;');
-console.log('%cMeme + Project = Future', 'font-size: 12px; color: #90EE90;');
+console.log('%cPEPIQ - 402X Integration Protocol', 'font-size: 16px; font-weight: bold; color: #90EE90;');
+console.log('%cMeme + Project = Future', 'font-size: 12px; color: #00FF00;');
