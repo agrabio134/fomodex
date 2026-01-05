@@ -7,20 +7,18 @@
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://terminal.jup.ag/main-v4.js" data-preload></script>
 </head>
 <body>
     <!-- Particles Background -->
     <div class="particles" id="particles"></div>
-
     <!-- Interactive BG Layer -->
     <canvas id="interactive-bg"></canvas>
-
     <!-- Top Banner -->
     <div class="top-banner">
         INTRODUCING PEPIQ: AI CHAT AGENT × 402X INTEGRATION - MEME WITH REAL UTILITY
         <button class="close-banner">×</button>
     </div>
-
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
@@ -46,7 +44,6 @@
             <a href="#" class="nav-cta" data-tooltip="Coming Soon">LAUNCH APP</a>
         </div>
     </nav>
-
     <!-- Hero -->
     <section class="hero">
         <div class="container">
@@ -61,9 +58,78 @@
                     <a href="#about" class="btn btn-secondary">LEARN MORE</a>
                 </div>
             </div>
+            <div class="hero-swap">
+                <div class="swap-box">
+                    <div class="swap-header">
+                        <h3>Swap</h3>
+                        <div class="swap-settings">
+                            <button class="settings-btn" data-tooltip="Settings - Coming Soon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swap-form">
+                        <div class="swap-input-group">
+                            <div class="swap-input from">
+                                <div class="token-select">
+                                    <img src="assets/solana-logo.png" alt="SOL">
+                                    <span>SOL</span>
+                                    <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+                                </div>
+                                <input type="text" placeholder="0.0" value="" readonly>
+                            </div>
+                            <div class="swap-arrow-container">
+                                <button class="swap-arrow">↓</button>
+                            </div>
+                            <div class="swap-input to">
+                                <div class="token-select">
+                                    <img src="assets/logo.png" alt="$PEPIQ">
+                                    <span>PEP</span>
+                                    <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M6 9l6 6 6-6"></path>
+                                    </svg>
+
+                                </div>
+                                                                                                    <input type="text" placeholder="0.0" value="" readonly>
+                                
+                            </div>
+                        </div>
+                        <div class="swap-details">
+                            <div class="detail-item">
+                                <span>Price</span>
+                                <span>1 SOL ≈ - $PEPIQ</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>Slippage Tolerance</span>
+                                <span>0.5%</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>Minimum Received</span>
+                                <span>9950 $PEPIQ</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>Price Impact</span>
+                                <span class="low-impact">&lt; 0.01%</span>
+                            </div>
+                            <div class="detail-item">
+                                <span>Liquidity Provider Fee</span>
+                                <span>0.003 SOL</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary swap-btn" data-tooltip="Swap Under Development - Coming Soon">Swap</button>
+                    </div>
+                    <div class="swap-footer">
+                        <span class="dev-note">Powered by Jupiter • Under Development</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
     <!-- Intro Statement -->
     <section class="intro-statement">
         <div class="container-narrow">
@@ -72,7 +138,6 @@
             <p class="subtext">Intelligence meets community—a categorical shift from empty memes to interactive experiences.</p>
         </div>
     </section>
-
     <!-- Feature Cards -->
     <section id="features" class="feature-cards">
         <div class="container-wide">
@@ -85,7 +150,6 @@
                 </div>
                 <p>Chat with our AI agent built on ElizaOS Cloud. Ask questions, get information, have conversations—intelligent interaction you can use right now.</p>
             </div>
-
             <div class="fcard">
                 <div class="fcard-label">Integration</div>
                 <h3>402X Protocol</h3>
@@ -95,7 +159,6 @@
                 </div>
                 <p>Built with 402X integration technology for enhanced connectivity across Solana's ecosystem. Designed for the future.</p>
             </div>
-
             <div class="fcard">
                 <div class="fcard-label">Community</div>
                 <h3>Fair Launch</h3>
@@ -105,7 +168,6 @@
                 </div>
                 <p>100% community-owned with LP burned and contract renounced. No team allocation. True decentralization from day one.</p>
             </div>
-
             <div class="fcard">
                 <div class="fcard-label">Security</div>
                 <h3>Protected</h3>
@@ -117,7 +179,6 @@
             </div>
         </div>
     </section>
-
     <!-- Image + Text Sections -->
     <section id="about" class="image-text-section">
         <div class="container">
@@ -130,7 +191,6 @@
             </div>
         </div>
     </section>
-
     <section class="image-text-section reverse">
         <div class="container">
             <img src="assets/banner2.jpg" alt="Community" class="section-img">
@@ -142,7 +202,6 @@
             </div>
         </div>
     </section>
-
     <!-- Comparison Table -->
     <section class="comparison-section">
         <div class="container-narrow">
@@ -150,28 +209,23 @@
                 <span class="section-tag">Paradigm Shift</span>
                 <h2>Traditional Memes vs AI-Powered Memes</h2>
             </div>
-
             <p class="comparison-intro">Most meme coins are just tokens with no purpose. PEPIQ combines viral culture with real AI technology you can interact with today.</p>
-
             <div class="comparison-table">
                 <div class="comparison-row">
                     <div class="comp-label">Interaction</div>
                     <div class="comp-old">Traditional: Buy and hold, nothing to do</div>
                     <div class="comp-new">PEPIQ: Chat with AI agent anytime</div>
                 </div>
-
                 <div class="comparison-row">
                     <div class="comp-label">Support</div>
                     <div class="comp-old">Traditional: Wait for team response</div>
                     <div class="comp-new">PEPIQ: AI answers 24/7 instantly</div>
                 </div>
-
                 <div class="comparison-row">
                     <div class="comp-label">Utility</div>
                     <div class="comp-old">Traditional: Zero utility, pure speculation</div>
                     <div class="comp-new">PEPIQ: Real AI you can use right now</div>
                 </div>
-
                 <div class="comparison-row">
                     <div class="comp-label">Ownership</div>
                     <div class="comp-old">Traditional: Team-controlled</div>
@@ -180,7 +234,6 @@
             </div>
         </div>
     </section>
-
     <!-- Core Message -->
     <section class="core-message">
         <div class="container-narrow">
@@ -190,7 +243,6 @@
             <p>This isn't vaporware. <strong>Chat with PEPIQ AI and see for yourself.</strong> The technology exists today, not in some distant roadmap.</p>
         </div>
     </section>
-
     <!-- Tokenomics -->
     <section id="tokenomics" class="tokenomics-section">
         <div class="container-narrow">
@@ -198,13 +250,11 @@
                 <span class="section-tag">Tokenomics</span>
                 <h2>Simple & Fair Distribution</h2>
             </div>
-
             <div class="token-supply-box">
                 <div class="supply-label">Total Supply</div>
                 <div class="supply-number">1B</div>
                 <div class="supply-desc">PEPIQ Tokens</div>
             </div>
-
             <div class="token-features-list">
                 <div class="token-feat">
                     <div class="feat-title">0% Tax</div>
@@ -225,13 +275,11 @@
             </div>
         </div>
     </section>
-
     <!-- CTA Section -->
     <section id="buy" class="cta-section">
         <div class="container-narrow">
             <h2>Experience AI-Powered Memes Today</h2>
             <p>Join the community and chat with PEPIQ AI built on ElizaOS.</p>
-
             <div class="steps-grid">
                 <div class="step-item">
                     <div class="step-num">1</div>
@@ -246,7 +294,6 @@
                     <div class="step-text">Swap for $PEPIQ</div>
                 </div>
             </div>
-
             <div class="ca-box">
                 <label>Contract Address</label>
                 <div class="ca-input-wrapper">
@@ -259,14 +306,16 @@
                     </button>
                 </div>
             </div>
-
+            <div class="swap-box">
+                <h3>Swap SOL for $PEPIQ</h3>
+                <div id="integrated-terminal"></div>
+            </div>
             <div class="cta-actions">
                 <a href="https://t.me/PEPIQ_SOL" target="_blank" class="btn btn-large btn-primary-large">JOIN TELEGRAM</a>
                 <a href="https://x.com/PEPIQ_SOL" target="_blank" class="btn btn-large btn-outline">FOLLOW ON X</a>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -293,7 +342,6 @@
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
