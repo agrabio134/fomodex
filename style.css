@@ -12,15 +12,79 @@
     --white: #FFFFFF;
 }
 
+/* Interactive Background Canvas */
+#interactive-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Scanline Overlay */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(144, 238, 144, 0.02) 50%,
+        transparent 50%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 2;
+    animation: scanline 8s linear infinite;
+}
+
+@keyframes scanline {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(4px);
+    }
+}
+
+/* Tech Corner Brackets */
+.fcard::after,
+.token-supply-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    pointer-events: none;
+}
+
+.fcard::after {
+    border-image: linear-gradient(
+        to right,
+        var(--light-green) 20px,
+        transparent 20px,
+        transparent calc(100% - 20px),
+        var(--light-green) calc(100% - 20px)
+    ) 2;
+}
+
 body {
-    font-family: 'Inter', -apple-system, sans-serif;
+    font-family: 'Space Grotesk', -apple-system, sans-serif;
     background: var(--black);
     color: var(--white);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow-x: hidden;
 }
 
-/* Animated Background */
+/* Animated Tech Background - Multiple Layers */
 body::before {
     content: '';
     position: fixed;
@@ -29,18 +93,193 @@ body::before {
     width: 200%;
     height: 200%;
     background: 
-        radial-gradient(circle at 20% 30%, rgba(144, 238, 144, 0.15) 0%, transparent 35%),
-        radial-gradient(circle at 80% 70%, rgba(0, 255, 0, 0.12) 0%, transparent 40%),
-        radial-gradient(circle at 40% 80%, rgba(10, 77, 10, 0.2) 0%, transparent 38%);
-    animation: mesh-movement 20s ease-in-out infinite;
+        radial-gradient(circle at 20% 30%, rgba(144, 238, 144, 0.2) 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(0, 255, 0, 0.18) 0%, transparent 35%),
+        radial-gradient(circle at 40% 80%, rgba(10, 77, 10, 0.25) 0%, transparent 32%),
+        radial-gradient(circle at 90% 20%, rgba(144, 238, 144, 0.15) 0%, transparent 28%),
+        radial-gradient(circle at 60% 50%, rgba(0, 255, 0, 0.12) 0%, transparent 40%);
+    animation: mesh-movement 25s ease-in-out infinite;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.95;
+}
+
+@keyframes mesh-movement {
+    0%, 100% { 
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        opacity: 0.85;
+    }
+    25% { 
+        transform: translate(6%, -10%) rotate(90deg) scale(1.15);
+        opacity: 1;
+    }
+    50% { 
+        transform: translate(-10%, 6%) rotate(180deg) scale(0.9);
+        opacity: 0.9;
+    }
+    75% { 
+        transform: translate(8%, -8%) rotate(270deg) scale(1.08);
+        opacity: 0.95;
+    }
+}
+
+/* Tech Grid Background */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(144, 238, 144, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(144, 238, 144, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 0;
+    pointer-events: none;
+    animation: grid-drift 40s linear infinite;
+}
+
+@keyframes grid-drift {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(60px, 60px);
+        opacity: 0.5;
+    }
+}
+
+/* Floating Particles */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--light-green);
+    border-radius: 50%;
+    opacity: 0;
+    animation: float-particle 20s infinite;
+    box-shadow: 0 0 10px var(--light-green);
+}
+
+.particle:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.particle:nth-child(2) {
+    left: 25%;
+    animation-delay: 3s;
+    animation-duration: 18s;
+}
+
+.particle:nth-child(3) {
+    left: 45%;
+    animation-delay: 1s;
+    animation-duration: 22s;
+}
+
+.particle:nth-child(4) {
+    left: 65%;
+    animation-delay: 5s;
+    animation-duration: 16s;
+}
+
+.particle:nth-child(5) {
+    left: 80%;
+    animation-delay: 2s;
+    animation-duration: 20s;
+}
+
+.particle:nth-child(6) {
+    left: 15%;
+    animation-delay: 7s;
+    animation-duration: 19s;
+}
+
+.particle:nth-child(7) {
+    left: 55%;
+    animation-delay: 4s;
+    animation-duration: 17s;
+}
+
+.particle:nth-child(8) {
+    left: 90%;
+    animation-delay: 6s;
+    animation-duration: 21s;
+}
+
+@keyframes float-particle {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes grid-move {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; }
+}
+
+/* Floating Particles */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 0;
     pointer-events: none;
 }
 
-@keyframes mesh-movement {
-    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
-    33% { transform: translate(8%, -5%) rotate(120deg) scale(1.05); }
-    66% { transform: translate(-5%, 8%) rotate(240deg) scale(0.95); }
+.particle {
+    position: absolute;
+    background: var(--light-green);
+    border-radius: 50%;
+    animation: float-particle linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes float-particle {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100px) scale(1);
+        opacity: 0;
+    }
 }
 
 .container {
@@ -198,11 +437,32 @@ body::before {
 }
 
 .hero h1 {
+    font-family: 'Orbitron', sans-serif;
     font-size: 96px;
     font-weight: 900;
     line-height: 0.95;
     letter-spacing: -4px;
     margin-bottom: 32px;
+    text-shadow: 
+        0 0 40px rgba(144, 238, 144, 0.5),
+        0 0 80px rgba(144, 238, 144, 0.3),
+        0 0 120px rgba(144, 238, 144, 0.2);
+    animation: title-glow 3s ease-in-out infinite;
+}
+
+@keyframes title-glow {
+    0%, 100% {
+        text-shadow: 
+            0 0 40px rgba(144, 238, 144, 0.5),
+            0 0 80px rgba(144, 238, 144, 0.3),
+            0 0 120px rgba(144, 238, 144, 0.2);
+    }
+    50% {
+        text-shadow: 
+            0 0 50px rgba(144, 238, 144, 0.7),
+            0 0 100px rgba(144, 238, 144, 0.5),
+            0 0 150px rgba(144, 238, 144, 0.3);
+    }
 }
 
 .hero-desc {
@@ -243,11 +503,23 @@ body::before {
 .btn-primary {
     background: var(--light-green);
     color: var(--black);
+    box-shadow: 0 0 20px rgba(144, 238, 144, 0.4);
+    animation: button-pulse 2s ease-in-out infinite;
+}
+
+@keyframes button-pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(144, 238, 144, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(144, 238, 144, 0.6);
+    }
 }
 
 .btn-primary:hover {
     background: var(--accent-green);
     transform: translateY(-2px);
+    box-shadow: 0 5px 40px rgba(144, 238, 144, 0.6);
 }
 
 .btn-secondary {
@@ -297,11 +569,34 @@ body::before {
     padding: 48px 40px;
     margin-bottom: 24px;
     transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.fcard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(144, 238, 144, 0.1), transparent);
+    animation: scan-line 3s linear infinite;
+}
+
+@keyframes scan-line {
+    0% { left: -100%; }
+    100% { left: 100%; }
 }
 
 .fcard:hover {
     border-color: var(--light-green);
-    transform: translateY(-4px);
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 
+        0 0 40px rgba(144, 238, 144, 0.4),
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        inset 0 0 20px rgba(144, 238, 144, 0.05);
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .fcard-label {
@@ -314,10 +609,26 @@ body::before {
 }
 
 .fcard h3 {
+    font-family: 'Orbitron', sans-serif;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 16px;
     letter-spacing: -0.5px;
+    background: linear-gradient(45deg, var(--white), var(--light-green), var(--white));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: holographic 3s ease infinite;
+}
+
+@keyframes holographic {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 .fcard-tags {
@@ -366,6 +677,20 @@ body::before {
     height: 320px;
     object-fit: cover;
     border-radius: 0;
+    position: relative;
+    border: 1px solid rgba(144, 238, 144, 0.3);
+    box-shadow: 
+        0 0 40px rgba(144, 238, 144, 0.2),
+        inset 0 0 40px rgba(144, 238, 144, 0.1);
+    transition: all 0.4s;
+}
+
+.section-img:hover {
+    border-color: var(--light-green);
+    box-shadow: 
+        0 0 60px rgba(144, 238, 144, 0.4),
+        inset 0 0 60px rgba(144, 238, 144, 0.2);
+    transform: scale(1.02);
 }
 
 .text-label {
@@ -413,9 +738,16 @@ body::before {
 }
 
 .section-header-center h2 {
+    font-family: 'Orbitron', sans-serif;
     font-size: 48px;
     font-weight: 700;
     letter-spacing: -1px;
+}
+
+.intro-statement h2,
+.core-message h2,
+.cta-section h2 {
+    font-family: 'Orbitron', sans-serif;
 }
 
 .comparison-intro {
@@ -505,6 +837,7 @@ body::before {
     border: 1px solid rgba(144, 238, 144, 0.2);
     padding: 64px 48px;
     margin-bottom: 48px;
+    text-align: center;
 }
 
 .supply-label {
@@ -517,12 +850,23 @@ body::before {
 }
 
 .supply-number {
-    font-size: 96px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 120px;
     font-weight: 900;
     color: var(--light-green);
     line-height: 1;
-    letter-spacing: -3px;
+    letter-spacing: -4px;
     margin-bottom: 16px;
+    text-shadow: 
+        0 0 40px rgba(144, 238, 144, 0.8),
+        0 0 80px rgba(144, 238, 144, 0.5);
+    animation: digital-flicker 0.1s infinite alternate;
+}
+
+@keyframes digital-flicker {
+    0%, 90% { opacity: 1; }
+    95% { opacity: 0.95; }
+    100% { opacity: 1; }
 }
 
 .supply-desc {
@@ -654,6 +998,17 @@ body::before {
 .btn-large {
     padding: 18px 48px;
     font-size: 15px;
+}
+
+.btn-primary-large {
+    background: var(--light-green);
+    color: var(--black);
+}
+
+.btn-primary-large:hover {
+    background: var(--accent-green);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(144, 238, 144, 0.4);
 }
 
 .btn-outline {
