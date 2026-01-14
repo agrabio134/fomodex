@@ -145,6 +145,11 @@ body {
     letter-spacing: -0.5px;
 }
 
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
 .logo-icon {
     width: 36px;
     height: 36px;
