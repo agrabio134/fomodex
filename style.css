@@ -1032,8 +1032,8 @@ body {
 
 @media (max-width: 768px) {
     :root {
-        --primary: #059669;
-        --gradient: linear-gradient(135deg, #059669 0%, #00D4FF 100%);
+        --primary: #065f46;
+        --gradient: linear-gradient(135deg, #065f46 0%, #00D4FF 100%);
     }
 
     .nav-links {
