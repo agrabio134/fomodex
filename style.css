@@ -231,6 +231,30 @@ body {
     box-shadow: 0 8px 30px rgba(0, 255, 163, 0.3);
 }
 
+.coming-soon-badge {
+    display: none;
+    background: rgba(0, 255, 163, 0.15);
+    border: 1px solid rgba(0, 255, 163, 0.3);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+    0%, 100% { 
+        box-shadow: 0 0 0 0 rgba(0, 255, 163, 0.4);
+    }
+    50% { 
+        box-shadow: 0 0 0 8px rgba(0, 255, 163, 0);
+    }
+}
+
 .nav-cta-wrapper {
     position: relative;
 }
@@ -992,12 +1016,12 @@ body {
         display: none;
     }
 
-    .nav-cta span {
+    .nav-cta-wrapper {
         display: none;
     }
 
-    .nav-cta svg {
-        margin: 0;
+    .coming-soon-badge {
+        display: block;
     }
 
     .hero {
