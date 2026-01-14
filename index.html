@@ -3,338 +3,374 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PEPIQ X ElizaOS - AI-Powered Meme on Solana</title>
+    <title>FOMO DEX - Next-Gen Decentralized Exchange on Solana</title>
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://terminal.jup.ag/main-v4.js" data-preload></script>
 </head>
 <body>
-    <!-- Particles Background -->
-    <div class="particles" id="particles"></div>
-    <!-- Interactive BG Layer -->
-    <canvas id="interactive-bg"></canvas>
-    <!-- Top Banner -->
-    <div class="top-banner">
-        INTRODUCING PEPIQ: AI CHAT AGENT × 402X INTEGRATION - MEME WITH REAL UTILITY
-        <button class="close-banner">×</button>
+    <div class="grain-overlay"></div>
+    <div class="gradient-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
     </div>
-    <!-- Navigation -->
+
     <nav class="nav">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="assets/logo.png" alt="PEPIQ">
-                <span style="font-size: 36px; color: #00FF00;">$PEPIQ</span>
+                <div class="logo-icon">
+                    <svg viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L4 9V23L16 30L28 23V9L16 2Z" stroke="url(#logoGrad)" stroke-width="2" fill="none"/>
+                        <path d="M16 8L10 11.5V18.5L16 22L22 18.5V11.5L16 8Z" fill="url(#logoGrad)"/>
+                        <defs>
+                            <linearGradient id="logoGrad" x1="4" y1="2" x2="28" y2="30">
+                                <stop offset="0%" stop-color="#00FFA3"/>
+                                <stop offset="100%" stop-color="#00D4FF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span>FOMO<span class="accent">DEX</span></span>
             </div>
             <div class="nav-links">
-                <a href="#about">ABOUT</a>
-                <a href="#features">FEATURES</a>
-                <a href="#tokenomics">TOKENOMICS</a>
-                <a href="https://t.me/PEPIQ_SOL" target="_blank">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <a href="#features">Features</a>
+                <a href="#why">Why FOMO</a>
+                <a href="#stats">Stats</a>
+                <a href="https://t.me/PEPIQ_SOL" target="_blank" class="social-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
                     </svg>
                 </a>
-                <a href="https://x.com/PEPIQ_SOL" target="_blank">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <a href="https://x.com/PEPIQ_SOL" target="_blank" class="social-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                     </svg>
                 </a>
             </div>
-            <a href="https://www.elizacloud.ai/dashboard/chat?characterId=2edfdf0f-8069-4e7e-a6d6-d7b39487b9bc" class="nav-cta">LAUNCH APP</a>
+            <a href="https://jup.ag" target="_blank" class="nav-cta">
+                <span>LAUNCH FOMO-DEX</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
         </div>
     </nav>
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>$PEPIQ<br>X ElizaOS</h1>
-                <p class="hero-desc">AI chat agent meets meme culture featuring 402X integration on Solana</p>
-                <div class="hero-subtitle">
-                    Chat with PEPIQ AI, your intelligent companion built on ElizaOS Cloud. Ask questions, get instant responses, and experience the future of AI-powered memes.
-                </div>
-                <div class="hero-actions">
-                    <a href="#buy" class="btn btn-primary">BUY $PEPIQ</a>
-                    <a href="#about" class="btn btn-secondary">LEARN MORE</a>
-                </div>
-            </div>
-            <div class="hero-swap">
-                <div class="swap-box">
-                    <div class="swap-header">
-                        <h3>Swap</h3>
-                        <div class="swap-settings">
-                            <button class="settings-btn" data-tooltip="Settings - Coming Soon">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="3"></circle>
-                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="swap-form">
-                        <div class="swap-input-group">
-                            <div class="swap-input from">
-                                <div class="token-select">
-                                    <img src="assets/solana-logo.png" alt="SOL">
-                                    <span>SOL</span>
-                                    <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M6 9l6 6 6-6"></path>
-                                    </svg>
-                                </div>
-                                <input type="text" placeholder="0.0" value="" readonly>
-                            </div>
-                            <div class="swap-arrow-container">
-                                <button class="swap-arrow">↓</button>
-                            </div>
-                            <div class="swap-input to">
-                                <div class="token-select">
-                                    <img src="assets/logo.png" alt="$PEPIQ">
-                                    <span>PEP</span>
-                                    <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M6 9l6 6 6-6"></path>
-                                    </svg>
 
-                                </div>
-                                                                                                    <input type="text" placeholder="0.0" value="" readonly>
-                                
-                            </div>
-                        </div>
-                        <div class="swap-details">
-                            <div class="detail-item">
-                                <span>Price</span>
-                                <span>1 SOL ≈ - $PEPIQ</span>
-                            </div>
-                            <div class="detail-item">
-                                <span>Slippage Tolerance</span>
-                                <span>0.5%</span>
-                            </div>
-                            <div class="detail-item">
-                                <span>Minimum Received</span>
-                                <span>9950 $PEPIQ</span>
-                            </div>
-                            <div class="detail-item">
-                                <span>Price Impact</span>
-                                <span class="low-impact">&lt; 0.01%</span>
-                            </div>
-                            <div class="detail-item">
-                                <span>Liquidity Provider Fee</span>
-                                <span>0.003 SOL</span>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary swap-btn" data-tooltip="Swap Under Development - Coming Soon" style="display: flex; justify-content: center;">Swap</button>
-                    </div>
-                    <div class="swap-footer">
-                        <span class="dev-note">Powered by $PEPIQ • Under Development</span>
-                    </div>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse"></span>
+                    <span>LIVE ON SOLANA MAINNET</span>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- Intro Statement -->
-    <section class="intro-statement">
-        <div class="container-narrow">
-            <h2>A new primitive for AI memes</h2>
-            <p>PEPIQ introduces chat-based AI utility where you can actually talk to an intelligent agent. Not just hype real AI you can use today.</p>
-            <p class="subtext">Intelligence meets community a categorical shift from empty memes to interactive experiences.</p>
-        </div>
-    </section>
-    <!-- Feature Cards -->
-    <section id="features" class="feature-cards">
-        <div class="container-wide">
-            <div class="fcard">
-                <div class="fcard-label">AI Chat</div>
-                <h3>PEPIQ AI Agent</h3>
-                <div class="fcard-tags">
-                    <span>ElizaOS</span>
-                    <span>24/7 Available</span>
-                </div>
-                <p>Chat with our AI agent built on ElizaOS Cloud. Ask questions, get information, have conversations intelligent interaction you can use right now.</p>
-            </div>
-            <div class="fcard">
-                <div class="fcard-label">Integration</div>
-                <h3>402X Protocol</h3>
-                <div class="fcard-tags">
-                    <span>Cross-Protocol</span>
-                    <span>Seamless</span>
-                </div>
-                <p>Built with 402X integration technology for enhanced connectivity across Solana's ecosystem. Designed for the future.</p>
-            </div>
-            <div class="fcard">
-                <div class="fcard-label">Community</div>
-                <h3>Fair Launch</h3>
-                <div class="fcard-tags">
-                    <span>0% Tax</span>
-                    <span>LP Burned</span>
-                </div>
-                <p>100% community-owned with LP burned and contract renounced. No team allocation. True decentralization from day one.</p>
-            </div>
-            <div class="fcard">
-                <div class="fcard-label">Security</div>
-                <h3>Protected</h3>
-                <div class="fcard-tags">
-                    <span>Renounced</span>
-                    <span>Locked</span>
-                </div>
-                <p>Liquidity permanently locked, ownership renounced. Your investment is secured on Solana's battle-tested infrastructure.</p>
-            </div>
-        </div>
-    </section>
-    <!-- Image + Text Sections -->
-    <section id="about" class="image-text-section">
-        <div class="container">
-            <img src="assets/banner1.png" alt="PEPIQ AI" class="section-img">
-            <div class="section-text">
-                <span class="text-label">AI Technology</span>
-                <h2>Chat with PEPIQ AI</h2>
-                <p>We built our own AI agent using ElizaOS Cloud. Not automation scripts a real conversational AI that understands context, answers questions, and engages naturally.</p>
-                <p>Available 24/7 for the community. Enhanced with 402X integration for seamless connectivity.</p>
-            </div>
-        </div>
-    </section>
-    <section class="image-text-section reverse">
-        <div class="container">
-            <img src="assets/banner2.jpg" alt="Community" class="section-img">
-            <div class="section-text">
-                <span class="text-label">Community Driven</span>
-                <h2>Built for the People</h2>
-                <p>Fair launch with zero team tokens. Liquidity burned forever, contract renounced on day one. This isn't our token it's yours.</p>
-                <p>Every decision is community-driven. PEPIQ belongs to the holders, not a centralized team.</p>
-            </div>
-        </div>
-    </section>
-    <!-- Comparison Table -->
-    <section class="comparison-section">
-        <div class="container-narrow">
-            <div class="section-header-center">
-                <span class="section-tag">Paradigm Shift</span>
-                <h2>Traditional Memes vs AI-Powered Memes</h2>
-            </div>
-            <p class="comparison-intro">Most meme coins are just tokens with no purpose. PEPIQ combines viral culture with real AI technology you can interact with today.</p>
-            <div class="comparison-table">
-                <div class="comparison-row">
-                    <div class="comp-label">Interaction</div>
-                    <div class="comp-old">Traditional: Buy and hold, nothing to do</div>
-                    <div class="comp-new">PEPIQ: Chat with AI agent anytime</div>
-                </div>
-                <div class="comparison-row">
-                    <div class="comp-label">Support</div>
-                    <div class="comp-old">Traditional: Wait for team response</div>
-                    <div class="comp-new">PEPIQ: AI answers 24/7 instantly</div>
-                </div>
-                <div class="comparison-row">
-                    <div class="comp-label">Utility</div>
-                    <div class="comp-old">Traditional: Zero utility, pure speculation</div>
-                    <div class="comp-new">PEPIQ: Real AI you can use right now</div>
-                </div>
-                <div class="comparison-row">
-                    <div class="comp-label">Ownership</div>
-                    <div class="comp-old">Traditional: Team-controlled</div>
-                    <div class="comp-new">PEPIQ: 100% community, LP burned</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Core Message -->
-    <section class="core-message">
-        <div class="container-narrow">
-            <span class="section-tag">The Core Difference</span>
-            <h2>Real AI, Real Conversations</h2>
-            <p>PEPIQ isn't just claiming AI integration we actually built it. ElizaOS powers our chat agent that responds to you intelligently, contextually, naturally.</p>
-            <p>This isn't vaporware. <strong>Chat with PEPIQ AI and see for yourself.</strong> The technology exists today, not in some distant roadmap.</p>
-        </div>
-    </section>
-    <!-- Tokenomics -->
-    <section id="tokenomics" class="tokenomics-section">
-        <div class="container-narrow">
-            <div class="section-header-center">
-                <span class="section-tag">Tokenomics</span>
-                <h2>Simple & Fair Distribution</h2>
-            </div>
-            <div class="token-supply-box">
-                <div class="supply-label">Total Supply</div>
-                <div class="supply-number">1B</div>
-                <div class="supply-desc">PEPIQ Tokens</div>
-            </div>
-            <div class="token-features-list">
-                <div class="token-feat">
-                    <div class="feat-title">0% Tax</div>
-                    <div class="feat-desc">No buy or sell fees</div>
-                </div>
-                <div class="token-feat">
-                    <div class="feat-title">LP Burned</div>
-                    <div class="feat-desc">Liquidity locked forever</div>
-                </div>
-                <div class="token-feat">
-                    <div class="feat-title">Contract Renounced</div>
-                    <div class="feat-desc">True decentralization</div>
-                </div>
-                <div class="token-feat">
-                    <div class="feat-title">100% Community</div>
-                    <div class="feat-desc">No team allocation</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- CTA Section -->
-    <section id="buy" class="cta-section">
-        <div class="container-narrow">
-            <h2>Experience AI-Powered Memes Today</h2>
-            <p>Join the community and chat with PEPIQ AI built on ElizaOS.</p>
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-num">1</div>
-                    <div class="step-text">Get Solana wallet</div>
-                </div>
-                <div class="step-item">
-                    <div class="step-num">2</div>
-                    <div class="step-text">Buy SOL</div>
-                </div>
-                <div class="step-item">
-                    <div class="step-num">3</div>
-                    <div class="step-text">Swap for $PEPIQ</div>
-                </div>
-            </div>
-            <div class="ca-box">
-                <label>Contract Address</label>
-                <div class="ca-input-wrapper">
-                    <input type="text" id="ca" value="SOON" readonly>
-                    <button onclick="copyCA()">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                <h1>Trade Faster.<br/><span class="gradient-text">Fear Less.</span></h1>
+                <p class="hero-desc">The next-generation decentralized exchange built for speed, security, and seamless trading. Swap any token on Solana with lightning-fast execution and minimal fees.</p>
+                <div class="hero-actions">
+                    <a href="https://jup.ag" target="_blank" class="btn btn-primary">
+                        <span>LAUNCH FOMO-DEX</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
-                    </button>
+                    </a>
+                    <a href="#features" class="btn btn-ghost">
+                        <span>Explore Features</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">$2.75M+</span>
+                        <span class="stat-label">Total Volume</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value">&lt;0.5s</span>
+                        <span class="stat-label">Avg. Execution</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value">0.1%</span>
+                        <span class="stat-label">Trading Fee</span>
+                    </div>
                 </div>
             </div>
-          
+            <div class="hero-visual">
+                <div class="dex-preview">
+                    <div class="preview-glow"></div>
+                    <img src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/e058a505-1b81-4a2b-865f-2621733d8fb8/image-1768370650839.png?width=8000&height=8000&resize=contain" alt="FOMO DEX Interface">
+                    <div class="preview-overlay">
+                        <a href="https://jup.ag" target="_blank" class="preview-cta">
+                            <span>Start Trading</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <!-- Footer -->
+
+    <section class="ticker-section">
+        <div class="ticker-wrapper">
+            <div class="ticker-content">
+                <span class="ticker-item"><span class="ticker-symbol">$PUMP</span> <span class="ticker-green">+10.48%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">$PYTH</span> <span class="ticker-green">+7.58%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">$BONK</span> <span class="ticker-green">+7.40%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">$JUP</span> <span class="ticker-green">+7.32%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">$WEN</span> <span class="ticker-green">+3.72%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">$SOL</span> <span class="ticker-green">+2.15%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">$PUMP</span> <span class="ticker-green">+10.48%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">$PYTH</span> <span class="ticker-green">+7.58%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">$BONK</span> <span class="ticker-green">+7.40%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">$JUP</span> <span class="ticker-green">+7.32%</span></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">CORE FEATURES</span>
+                <h2>What is <span class="gradient-text">FOMO DEX</span>?</h2>
+                <p>A decentralized exchange protocol designed from the ground up for the Solana ecosystem. Trade tokens instantly with deep liquidity and industry-leading security.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card feature-large">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3>Lightning Fast Swaps</h3>
+                    <p>Execute trades in under 500ms with Solana's high-performance blockchain. No more waiting, no more slippage anxiety.</p>
+                    <div class="feature-tag">~400ms avg</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Battle-Tested Security</h3>
+                    <p>Audited smart contracts with multi-sig treasury. Your funds are protected by industry-leading security standards.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+                    <h3>Deep Liquidity</h3>
+                    <p>Aggregated liquidity from multiple sources ensures best prices and minimal price impact on every trade.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18M9 21V9"/>
+                        </svg>
+                    </div>
+                    <h3>Advanced Charts</h3>
+                    <p>Professional-grade trading interface with real-time charts, order books, and comprehensive market data.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Community First</h3>
+                    <p>Built by traders, for traders. Zero team allocation, liquidity burned, and fully decentralized governance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why" class="why-section">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-content">
+                    <span class="section-tag">WHY FOMO DEX</span>
+                    <h2>Built Different.<br/><span class="gradient-text">Trade Different.</span></h2>
+                    <p>Traditional DEXs are slow, expensive, and complicated. FOMO DEX strips away the complexity to deliver a trading experience that's fast, cheap, and intuitive.</p>
+                    <ul class="why-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span>No registration or KYC required</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span>Non-custodial - you control your keys</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span>Lowest fees on Solana ecosystem</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span>MEV protection built-in</span>
+                        </li>
+                    </ul>
+                    <a href="https://jup.ag" target="_blank" class="btn btn-primary">
+                        <span>Start Trading Now</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="why-visual">
+                    <div class="comparison-card">
+                        <div class="comparison-header">
+                            <span>Traditional DEX</span>
+                            <span class="vs">VS</span>
+                            <span class="highlight">FOMO DEX</span>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="label">Execution Speed</span>
+                            <span class="old">2-5 seconds</span>
+                            <span class="new">&lt;500ms</span>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="label">Trading Fees</span>
+                            <span class="old">0.3% - 1%</span>
+                            <span class="new">0.1%</span>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="label">Slippage</span>
+                            <span class="old">1% - 5%</span>
+                            <span class="new">&lt;0.5%</span>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="label">MEV Protection</span>
+                            <span class="old">None</span>
+                            <span class="new">Built-in</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <span class="stat-number">$817K+</span>
+                    <span class="stat-desc">Pool Liquidity</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-desc">Uptime</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <span class="stat-number">5K+</span>
+                    <span class="stat-desc">Active Traders</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <span class="stat-number">OPTIMAL</span>
+                    <span class="stat-desc">Network Health</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h2>Ready to Trade?</h2>
+                    <p>Connect your wallet and start trading in seconds. No signup required.</p>
+                    <a href="https://jup.ag" target="_blank" class="btn btn-primary btn-large">
+                        <span>LAUNCH FOMO-DEX</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="cta-decoration">
+                    <div class="cta-orb"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Project</h4>
-                    <a href="#about">About</a>
-                    <a href="#features">Features</a>
-                    <a href="#tokenomics">Tokenomics</a>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 32 32" fill="none">
+                                <path d="M16 2L4 9V23L16 30L28 23V9L16 2Z" stroke="url(#logoGrad2)" stroke-width="2" fill="none"/>
+                                <path d="M16 8L10 11.5V18.5L16 22L22 18.5V11.5L16 8Z" fill="url(#logoGrad2)"/>
+                                <defs>
+                                    <linearGradient id="logoGrad2" x1="4" y1="2" x2="28" y2="30">
+                                        <stop offset="0%" stop-color="#00FFA3"/>
+                                        <stop offset="100%" stop-color="#00D4FF"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span>FOMO<span class="accent">DEX</span></span>
+                    </div>
+                    <p>The next-generation DEX on Solana.</p>
                 </div>
-                <div class="footer-col">
-                    <h4>Community</h4>
-                    <a href="https://t.me/PEPIQ_SOL" target="_blank">Telegram</a>
-                    <a href="https://x.com/PEPIQ_SOL" target="_blank">Twitter/X</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contract</h4>
-                    <a href="#buy">CA: SOON</a>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#why">Why FOMO</a>
+                        <a href="#stats">Stats</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Community</h4>
+                        <a href="https://t.me/PEPIQ_SOL" target="_blank">Telegram</a>
+                        <a href="https://x.com/PEPIQ_SOL" target="_blank">Twitter/X</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <div>© 2026 PEPIQ</div>
-                <div class="footer-disclaimer">Not financial advice. DYOR.</div>
+                <span>&copy; 2026 FOMO DEX. All rights reserved.</span>
+                <span class="footer-disclaimer">Not financial advice. DYOR.</span>
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
