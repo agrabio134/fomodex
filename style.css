@@ -1031,9 +1031,16 @@ body {
 }
 
 @media (max-width: 768px) {
-    :root {
-        --primary: #065f46;
-        --gradient: linear-gradient(135deg, #065f46 0%, #00D4FF 100%);
+    body {
+        background: #020605;
+    }
+
+    .orb-1 {
+        background: #064e3b;
+    }
+
+    .orb-3 {
+        background: linear-gradient(135deg, #064e3b, #004d4d);
     }
 
     .nav-links {
