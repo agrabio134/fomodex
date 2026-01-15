@@ -5,14 +5,14 @@
 }
 
 :root {
-    --primary: #00FFA3;
+    --primary: #00e5ff;
     --secondary: #00D4FF;
     --bg-dark: #0a0a0f;
     --bg-card: rgba(255, 255, 255, 0.02);
     --border: rgba(255, 255, 255, 0.06);
     --text: #ffffff;
     --text-muted: rgba(255, 255, 255, 0.6);
-    --gradient: linear-gradient(135deg, #00FFA3 0%, #00D4FF 100%);
+    --gradient: linear-gradient(135deg, #00e5ff 0%, #00D4FF 100%);
 }
 
 html {
@@ -214,8 +214,8 @@ body {
 .ca-badge {
     display: inline-flex;
     align-items: center;
-    background: rgba(0, 255, 163, 0.1);
-    border: 1px solid rgba(0, 255, 163, 0.3);
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgba(0, 229, 255, 0.3);
     color: var(--primary);
     padding: 8px 14px;
     border-radius: 8px;
@@ -247,13 +247,13 @@ body {
 
 .nav-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(0, 255, 163, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 229, 255, 0.3);
 }
 
 .coming-soon-badge {
     display: none;
-    background: rgba(0, 255, 163, 0.15);
-    border: 1px solid rgba(0, 255, 163, 0.3);
+    background: rgba(0, 229, 255, 0.15);
+    border: 1px solid rgba(0, 229, 255, 0.3);
     color: var(--primary);
     padding: 6px 12px;
     border-radius: 20px;
@@ -267,10 +267,10 @@ body {
 
 @keyframes badge-pulse {
     0%, 100% { 
-        box-shadow: 0 0 0 0 rgba(0, 255, 163, 0.4);
+        box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.4);
     }
     50% { 
-        box-shadow: 0 0 0 8px rgba(0, 255, 163, 0);
+        box-shadow: 0 0 0 8px rgba(0, 229, 255, 0);
     }
 }
 
@@ -281,7 +281,7 @@ body {
 .nav-cta.disabled {
     opacity: 0.6;
     cursor: not-allowed;
-    background: linear-gradient(135deg, rgba(0, 255, 163, 0.5) 0%, rgba(0, 212, 255, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.5) 0%, rgba(0, 212, 255, 0.5) 100%);
 }
 
 .nav-cta.disabled:hover {
@@ -300,8 +300,8 @@ body {
     top: calc(100% + 8px);
     left: 50%;
     transform: translateX(-50%) translateY(-5px);
-    background: rgba(0, 255, 163, 0.15);
-    border: 1px solid rgba(0, 255, 163, 0.3);
+    background: rgba(0, 229, 255, 0.15);
+    border: 1px solid rgba(0, 229, 255, 0.3);
     color: var(--primary);
     padding: 8px 16px;
     border-radius: 8px;
@@ -322,7 +322,7 @@ body {
     transform: translateX(-50%);
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-bottom: 6px solid rgba(0, 255, 163, 0.3);
+    border-bottom: 6px solid rgba(0, 229, 255, 0.3);
 }
 
 .btn-wrapper {
@@ -343,7 +343,7 @@ body {
 
 .btn.disabled:hover {
     transform: none;
-    box-shadow: 0 4px 20px rgba(0, 255, 163, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.25);
 }
 
 .preview-cta-wrapper {
@@ -383,8 +383,8 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(0, 255, 163, 0.1);
-    border: 1px solid rgba(0, 255, 163, 0.2);
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgba(0, 229, 255, 0.2);
     padding: 8px 16px;
     border-radius: 100px;
     font-size: 11px;
@@ -446,12 +446,12 @@ body {
 .btn-primary {
     background: var(--gradient);
     color: #000;
-    box-shadow: 0 4px 20px rgba(0, 255, 163, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.25);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 40px rgba(0, 255, 163, 0.4);
+    box-shadow: 0 8px 40px rgba(0, 229, 255, 0.4);
 }
 
 .btn-ghost {
@@ -516,7 +516,7 @@ body {
 .preview-glow {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(0, 255, 163, 0.1), rgba(0, 212, 255, 0.1));
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(0, 212, 255, 0.1));
     z-index: 1;
     pointer-events: none;
 }
@@ -568,7 +568,7 @@ body {
 
 .ticker-section {
     padding: 20px 0;
-    background: rgba(0, 255, 163, 0.03);
+    background: rgba(0, 229, 255, 0.03);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     overflow: hidden;
@@ -670,7 +670,7 @@ body {
 }
 
 .feature-card:hover {
-    border-color: rgba(0, 255, 163, 0.3);
+    border-color: rgba(0, 229, 255, 0.3);
     transform: translateY(-4px);
 }
 
@@ -685,7 +685,7 @@ body {
 .feature-icon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, rgba(0, 255, 163, 0.1), rgba(0, 212, 255, 0.1));
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(0, 212, 255, 0.1));
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -716,7 +716,7 @@ body {
     display: inline-block;
     margin-top: 16px;
     padding: 6px 12px;
-    background: rgba(0, 255, 163, 0.1);
+    background: rgba(0, 229, 255, 0.1);
     border-radius: 6px;
     font-size: 12px;
     font-weight: 600;
@@ -852,7 +852,7 @@ body {
 }
 
 .stat-card:hover {
-    border-color: rgba(0, 255, 163, 0.3);
+    border-color: rgba(0, 229, 255, 0.3);
     transform: translateY(-4px);
 }
 
@@ -860,7 +860,7 @@ body {
     width: 48px;
     height: 48px;
     margin: 0 auto 16px;
-    background: linear-gradient(135deg, rgba(0, 255, 163, 0.1), rgba(0, 212, 255, 0.1));
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(0, 212, 255, 0.1));
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -898,8 +898,8 @@ body {
 
 .cta-card {
     position: relative;
-    background: linear-gradient(135deg, rgba(0, 255, 163, 0.05), rgba(0, 212, 255, 0.05));
-    border: 1px solid rgba(0, 255, 163, 0.2);
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.05), rgba(0, 212, 255, 0.05));
+    border: 1px solid rgba(0, 229, 255, 0.2);
     border-radius: 24px;
     padding: 80px;
     text-align: center;
@@ -1032,15 +1032,15 @@ body {
 
 @media (max-width: 768px) {
     body {
-        background: #020605;
+        background: #020608;
     }
 
     .orb-1 {
-        background: #064e3b;
+        background: #083344;
     }
 
     .orb-3 {
-        background: linear-gradient(135deg, #064e3b, #004d4d);
+        background: linear-gradient(135deg, #083344, #155e75);
     }
 
     .nav-links {
