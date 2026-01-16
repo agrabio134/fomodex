@@ -63,3 +63,14 @@ document.addEventListener('DOMContentLoaded', function() {
         statsObserver.observe(el);
     });
 });
+
+function copyCA() {
+    const caText = 'SOON';
+    navigator.clipboard.writeText(caText).then(() => {
+        const tooltip = document.getElementById('copy-tooltip');
+        tooltip.classList.add('show');
+        setTimeout(() => {
+            tooltip.classList.remove('show');
+        }, 1500);
+    });
+}

@@ -431,6 +431,60 @@ body {
 
 .hero-ca {
     margin-bottom: 48px;
+    position: relative;
+    display: inline-block;
+}
+
+.ca-badge {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ca-badge:hover {
+    background: rgba(0, 229, 255, 0.2);
+}
+
+.copy-icon {
+    font-size: 10px;
+    margin-left: 6px;
+    opacity: 0.7;
+}
+
+.copy-tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 229, 255, 0.9);
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.copy-tooltip.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.footer-logo-text {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.footer-fomo {
+    color: #ffffff;
+    text-shadow: 2px 2px 0 #00e5ff;
+}
+
+.footer-dex {
+    color: #00e5ff;
 }
 
 .btn {
