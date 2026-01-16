@@ -74,3 +74,13 @@ function copyCA() {
         }, 1500);
     });
 }
+
+function toggleMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    mobileNav.classList.toggle('active');
+}
+
+function closeMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    mobileNav.classList.remove('active');
+}
