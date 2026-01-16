@@ -426,6 +426,10 @@ body {
 .hero-actions {
     display: flex;
     gap: 16px;
+    margin-bottom: 16px;
+}
+
+.hero-ca {
     margin-bottom: 48px;
 }
 
@@ -564,47 +568,6 @@ body {
 
 .dex-preview:hover .preview-cta {
     transform: translateY(0);
-}
-
-.ticker-section {
-    padding: 20px 0;
-    background: rgba(0, 229, 255, 0.03);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    overflow: hidden;
-}
-
-.ticker-wrapper {
-    overflow: hidden;
-}
-
-.ticker-content {
-    display: flex;
-    gap: 48px;
-    animation: ticker 30s linear infinite;
-    white-space: nowrap;
-}
-
-@keyframes ticker {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-.ticker-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
-}
-
-.ticker-symbol {
-    font-weight: 600;
-    color: var(--text);
-}
-
-.ticker-green {
-    color: var(--primary);
 }
 
 .features-section {
