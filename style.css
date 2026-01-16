@@ -150,7 +150,7 @@ body {
     width: auto;
 }
 
-.logo-dex {
+.logo-labs {
     font-weight: 800;
     font-size: 24px;
     background: var(--gradient);
@@ -480,10 +480,10 @@ body {
 
 .footer-fomo {
     color: #ffffff;
-    text-shadow: 2px 2px 0 #00e5ff;
+    text-shadow: 1px 1px 0 #00e5ff;
 }
 
-.footer-dex {
+.footer-labs {
     color: #00e5ff;
 }
 
