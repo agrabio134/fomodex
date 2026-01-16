@@ -1019,6 +1019,14 @@ body {
     color: var(--text-muted);
 }
 
+.mobile-menu-btn {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
+}
+
 @media (max-width: 1024px) {
     .hero-container {
         grid-template-columns: 1fr;
@@ -1197,12 +1205,4 @@ body {
         gap: 12px;
         text-align: center;
     }
-}
-
-.mobile-menu-btn {
-    display: none;
-}
-
-.mobile-nav {
-    display: none;
 }
