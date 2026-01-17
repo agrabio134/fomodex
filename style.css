@@ -480,6 +480,14 @@ body {
     visibility: visible;
 }
 
+.ca-full {
+    display: inline;
+}
+
+.ca-short {
+    display: none;
+}
+
 .footer-logo-text {
     font-size: 28px;
     font-weight: 800;
@@ -1235,5 +1243,13 @@ body {
         flex-direction: column;
         gap: 12px;
         text-align: center;
+    }
+
+    .ca-full {
+        display: none;
+    }
+
+    .ca-short {
+        display: inline;
     }
 }
