@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function copyCA() {
-    const caText = 'LIVE';
+    const caText = 'DSEUEGxgDizLLLrVXmCqyAwD9GScpBsoH7HLmMYqfomo';
     navigator.clipboard.writeText(caText).then(() => {
         const tooltip = document.getElementById('copy-tooltip');
         tooltip.classList.add('show');
